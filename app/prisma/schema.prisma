@@ -1,0 +1,144 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  type      String   @default("management") // "management" or "client"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // NextAuth fields
+  accounts  Account[]
+  sessions  Session[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  formType  String   @default("contact")
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Invoice {
+  id          String   @id @default(cuid())
+  clientName  String
+  amount      Float
+  description String
+  status      String   @default("pending") // pending, paid, overdue
+  dueDate     DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  priority    String   @default("medium") // low, medium, high
+  status      String   @default("pending") // pending, in-progress, completed
+  dueDate     DateTime?
+  assignedTo  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  sender    String
+  recipient String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model EmailSignup {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  source    String?  // where they signed up from
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+}
+
+model Resume {
+  id          String   @id @default(cuid())
+  applicantName String
+  email       String
+  phone       String?
+  position    String
+  resumeUrl   String?
+  status      String   @default("new") // new, reviewed, interview, hired, rejected
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BusinessExpense {
+  id          String   @id @default(cuid())
+  description String
+  amount      Float
+  category    String
+  date        DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model WebsiteAnalytics {
+  id          String   @id @default(cuid())
+  date        DateTime @unique
+  visitors    Int      @default(0)
+  pageViews   Int      @default(0)
+  conversions Int      @default(0)
+  bounceRate  Float    @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
