@@ -1,0 +1,35 @@
+#!/bin/sh
+# Pre-push hook for Stewart-striping project
+
+echo "Running pre-push checks..."
+
+# Check if node_modules exists
+if [ ! -d "node_modules" ]; then
+  echo "⚠️  node_modules not found. Skipping checks."
+  exit 0
+fi
+
+# Run tests if available
+if command -v npm &> /dev/null && grep -q "\"test\"" package.json 2>/dev/null; then
+  echo "🧪 Running tests..."
+  npm run test --silent
+  if [ $? -ne 0 ]; then
+    echo "❌ Tests failed. Please fix before pushing."
+    exit 1
+  fi
+  echo "✅ Tests passed"
+fi
+
+# Run build if available
+if command -v npm &> /dev/null && grep -q "\"build\"" package.json 2>/dev/null; then
+  echo "🏗️  Running build check..."
+  npm run build --silent
+  if [ $? -ne 0 ]; then
+    echo "❌ Build failed. Please fix before pushing."
+    exit 1
+  fi
+  echo "✅ Build successful"
+fi
+
+echo "✅ Pre-push checks completed"
+exit 0
