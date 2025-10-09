@@ -15,7 +15,18 @@ const nextConfig = {
     // Long-term: fix type errors and set this back to false.
     ignoreBuildErrors: true,
   },
-  images: { unoptimized: true },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.public.blob.vercel-storage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.vercel-storage.com',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

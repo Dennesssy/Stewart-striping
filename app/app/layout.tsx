@@ -5,6 +5,7 @@ import './globals.css'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import Providers from '@/components/providers/session-provider'
+import { VercelProviders } from '@/components/vercel-providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <VercelProviders />
         </Providers>
       </body>
     </html>
