@@ -16,10 +16,6 @@
     {
       "path": "/api/cron/analytics-report",
       "schedule": "0 0 * * 0"
-    },
-    {
-      "path": "/api/cron/cleanup",
-      "schedule": "0 2 * * *"
     }
   ],
   "headers": [
