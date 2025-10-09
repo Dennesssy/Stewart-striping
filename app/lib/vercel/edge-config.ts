@@ -1,17 +1,8 @@
 /**
  * Vercel Edge Config
  * Use for: feature flags, A/B testing, dynamic configuration
- * Note: Install @vercel/edge-config if you plan to use Edge Config
  */
-
-// Mock implementation - install @vercel/edge-config to use real Edge Config
-const get = async <T = any>(key: string): Promise<T | undefined> => {
-  return undefined;
-};
-
-const getAll = async () => {
-  return {};
-};
+import { get, getAll } from '@vercel/edge-config';
 
 // Get a single config value
 export async function getConfig<T = any>(key: string): Promise<T | undefined> {
