@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest) {
   // Only check Edge Config if it's available and configured
   if (edgeConfigGet && process.env.EDGE_CONFIG) {
     try {
-      const maintenanceMode = await edgeConfigGet<boolean>('maintenanceMode');
+      const maintenanceMode = await edgeConfigGet('maintenanceMode') as boolean;
       
       if (maintenanceMode && !request.nextUrl.pathname.startsWith('/api')) {
         // Redirect to maintenance page
@@ -30,7 +30,7 @@ export async function middleware(request: NextRequest) {
     // Check feature flags for specific routes
     if (request.nextUrl.pathname.startsWith('/app/dashboard')) {
       try {
-        const features = await edgeConfigGet<Record<string, boolean>>('features');
+        const features = await edgeConfigGet('features') as Record<string, boolean> | undefined;
         
         // Example: Redirect to old dashboard if new one is disabled
         if (features && features.newDashboard === false) {
