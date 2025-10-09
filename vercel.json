@@ -48,8 +48,13 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "destination": "/app",
+      "permanent": false
+    },
+    {
       "source": "/home",
-      "destination": "/",
+      "destination": "/app",
       "permanent": true
     }
   ],
