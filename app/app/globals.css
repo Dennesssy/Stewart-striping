@@ -73,3 +73,80 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Animation fallback - ensures content is always visible */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to elements with initial hidden state */
+[style*="opacity:0"][style*="translateY"] {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards !important;
+}
+
+[style*="opacity:0"][style*="translateX(-"] {
+  animation: fadeInLeft 0.8s ease-out 0.3s forwards !important;
+}
+
+[style*="opacity:0"][style*="translateX(2"],
+[style*="opacity:0"][style*="translateX(3"] {
+  animation: fadeInRight 0.8s ease-out 0.3s forwards !important;
+}
+
+[style*="opacity:0"][style*="scale(0"] {
+  animation: scaleIn 0.6s ease-out 0.5s forwards !important;
+}
+
+/* Ensure all elements eventually become visible (safety net) */
+[style*="opacity:0"] {
+  animation: fadeInUp 1s ease-out 0.5s forwards !important;
+}
+
+/* Smooth transitions for hover effects */
+.group:hover img {
+  transition: transform 0.3s ease-out;
+}
+
+.group:hover {
+  transition: all 0.3s ease-out;
+}
