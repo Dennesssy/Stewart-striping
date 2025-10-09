@@ -100,7 +100,7 @@ export function CountUp({
           const startTime = Date.now();
           const endTime = startTime + duration;
 
-          function update() {
+          const update = () => {
             const now = Date.now();
             const progress = Math.min((now - startTime) / duration, 1);
             const current = Math.floor(end * progress);
@@ -110,7 +110,7 @@ export function CountUp({
             if (progress < 1) {
               requestAnimationFrame(update);
             }
-          }
+          };
 
           requestAnimationFrame(update);
           observer.unobserve(entry.target);
