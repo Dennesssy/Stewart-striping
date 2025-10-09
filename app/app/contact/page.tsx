@@ -145,7 +145,7 @@ export default function ContactPage() {
             className="relative aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl bg-gray-200"
           >
             <Image
-              src="https://i.pinimg.com/originals/35/4f/c4/354fc42327777b099b4dad55a6bd490b.jpg"
+              src="/images/contact/contact-header.jpg"
               alt="Stewart Striping service area map covering North Texas"
               fill
               className="object-cover"
@@ -173,7 +173,7 @@ export default function ContactPage() {
             {[
               {
                 id: 1,
-                image: "https://i.pinimg.com/originals/b4/bf/fa/b4bffa31fd8b4da2b1ce94bfe8282fd4.png",
+                image: "/images/contact/instagram-1.png",
                 caption: "ABC Corp's parking lot transformation! 50 spaces with ADA compliance ✨ #ParkingLotStriping #NorthTexas",
                 likes: 47,
                 comments: 8,
@@ -181,7 +181,7 @@ export default function ContactPage() {
               },
               {
                 id: 2,
-                image: "https://i.ytimg.com/vi/ph8ZxgEsLDY/maxresdefault.jpg",
+                image: "/images/services/striping-youtube.jpg",
                 caption: "Before & After at Retail Plaza! Amazing transformation 🎯 #BeforeAndAfter #ProfessionalStriping",
                 likes: 63,
                 comments: 12,
@@ -189,7 +189,7 @@ export default function ContactPage() {
               },
               {
                 id: 3,
-                image: "https://i.ytimg.com/vi/_zpwnKygSJM/maxresdefault.jpg",
+                image: "/images/automation/email-automation.jpg",
                 caption: "Our team in action at Office Complex! Precision and quality in every line 💪 #TeamWork #Quality",
                 likes: 35,
                 comments: 5,
@@ -197,7 +197,7 @@ export default function ContactPage() {
               },
               {
                 id: 4,
-                image: "https://cdn.pixabay.com/photo/2018/08/30/08/57/business-3641668_960_720.jpg",
+                image: "/images/automation/lead-capture.jpg",
                 caption: "Another satisfied customer! Thank you Shopping Center Inc for trusting us 🤝 #CustomerSatisfaction",
                 likes: 52,
                 comments: 9,
@@ -205,7 +205,7 @@ export default function ContactPage() {
               },
               {
                 id: 5,
-                image: "https://i.pinimg.com/originals/cc/be/78/ccbe7825079b42c5be83d6f6d009d281.jpg",
+                image: "/images/services/power-washing-detail.jpg",
                 caption: "Aerial view of our latest project - 120 spaces perfectly aligned! 🚁 #AerialView #PerfectLines",
                 likes: 89,
                 comments: 15,
@@ -213,7 +213,7 @@ export default function ContactPage() {
               },
               {
                 id: 6,
-                image: "https://blog.asphaltkingdom.com/hs-fs/hubfs/van-accessible-handicap-signage.png?width=1073&name=van-accessible-handicap-signage.png",
+                image: "/images/services/ada-signage.png",
                 caption: "ADA compliance is our priority! Proper accessibility for everyone 🅿️ #ADACompliant #Accessibility",
                 likes: 41,
                 comments: 7,

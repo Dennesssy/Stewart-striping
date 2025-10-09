@@ -20,7 +20,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full bg-gray-900">
           <Image
-            src="https://www.truscomfg.com/store/wp-content/uploads/2022/12/TruscoManufacturingCompany-183447-Parking-Lot-Striping-Blogbanner1.jpg"
+            src="/images/hero/parking-lot-main.jpg"
             alt="Professional parking lot striping"
             fill
             className="object-cover opacity-40"

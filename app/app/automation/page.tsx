@@ -79,7 +79,7 @@ export default function AutomationPage() {
             </p>
             <div className="relative aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl bg-gray-200">
               <Image
-                src="https://i.pinimg.com/originals/7c/bd/88/7cbd88b99d4ab03aa7f00ea8dfa4bb56.png"
+                src="/images/automation/analytics-dashboard.png"
                 alt="Digital marketing automation and SEO dashboard"
                 fill
                 className="object-cover"
@@ -137,7 +137,7 @@ export default function AutomationPage() {
                 <div className="flex-1">
                   <div className="relative aspect-square max-w-md mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-200">
                     <Image
-                      src={`https://i.ytimg.com/vi/DG9AMdu5udw/maxresdefault.jpg automation system interface showing ${feature.description.toLowerCase()}}`}
+                      src="/images/automation/seo-tools.jpg"
                       alt={`${feature.title} automation system`}
                       fill
                       className="object-cover"

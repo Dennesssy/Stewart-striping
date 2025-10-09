@@ -1,0 +1,103 @@
+{
+  "migrations": [
+    {
+      "file": "app/components/hero-section.tsx",
+      "replacements": [
+        {
+          "old": "https://www.truscomfg.com/store/wp-content/uploads/2022/12/TruscoManufacturingCompany-183447-Parking-Lot-Striping-Blogbanner1.jpg",
+          "new": "/images/hero/parking-lot-main.jpg"
+        }
+      ]
+    },
+    {
+      "file": "app/components/value-proposition.tsx",
+      "replacements": [
+        {
+          "old": "https://as2.ftcdn.net/v2/jpg/03/16/06/87/1000_F_316068747_Op8ozS0V3yIEUtSQ7ucD6m5iInH23qQH.jpg",
+          "new": "/images/hero/business-professional.jpg"
+        }
+      ]
+    },
+    {
+      "file": "app/components/cta-section.tsx",
+      "replacements": [
+        {
+          "old": "https://brixco.co/wp-content/uploads/2023/12/parking-lot-striping.webp",
+          "new": "/images/hero/cta-background.webp"
+        }
+      ]
+    },
+    {
+      "file": "app/components/services-overview.tsx",
+      "replacements": [
+        {
+          "old": "https://i.ytimg.com/vi/ph8ZxgEsLDY/maxresdefault.jpg",
+          "new": "/images/services/striping-youtube.jpg"
+        },
+        {
+          "old": "https://i.ytimg.com/vi/z_03c87RuX4/maxresdefault.jpg",
+          "new": "/images/services/power-washing-youtube.jpg"
+        },
+        {
+          "old": "https://i.pinimg.com/originals/e8/6f/ab/e86fab1aeef12a623d58822ac3dd0249.png",
+          "new": "/images/services/ada-compliance.png"
+        },
+        {
+          "old": "https://assets-global.website-files.com/5f688092bdf2ee0b6b010f87/647e15d8ea90a94ac15c61cf_Accredible_BadgePathways_03-Freeform.png",
+          "new": "/images/automation/analytics-dashboard.png"
+        }
+      ]
+    },
+    {
+      "file": "app/app/services/page.tsx",
+      "replacements": [
+        {
+          "old": "https://i.pinimg.com/originals/53/0a/a9/530aa98dc4fc1485685a4de8a4053960.jpg",
+          "new": "/images/services/parking-striping-detail.jpg"
+        },
+        {
+          "old": "https://i.pinimg.com/originals/cc/be/78/ccbe7825079b42c5be83d6f6d009d281.jpg",
+          "new": "/images/services/power-washing-detail.jpg"
+        },
+        {
+          "old": "https://blog.asphaltkingdom.com/hs-fs/hubfs/van-accessible-handicap-signage.png?width=1073&name=van-accessible-handicap-signage.png",
+          "new": "/images/services/ada-signage.png"
+        }
+      ]
+    },
+    {
+      "file": "app/app/automation/page.tsx",
+      "replacements": [
+        {
+          "old": "https://cdn.pixabay.com/photo/2018/08/30/08/57/business-3641668_960_720.jpg",
+          "new": "/images/automation/lead-capture.jpg"
+        },
+        {
+          "old": "https://i.ytimg.com/vi/_zpwnKygSJM/maxresdefault.jpg",
+          "new": "/images/automation/email-automation.jpg"
+        },
+        {
+          "old": "https://i.ytimg.com/vi/DG9AMdu5udw/maxresdefault.jpg",
+          "new": "/images/automation/seo-tools.jpg"
+        }
+      ]
+    },
+    {
+      "file": "app/app/contact/page.tsx",
+      "replacements": [
+        {
+          "old": "https://i.pinimg.com/originals/35/4f/c4/354fc42327777b099b4dad55a6bd490b.jpg",
+          "new": "/images/contact/contact-header.jpg"
+        },
+        {
+          "old": "https://i.pinimg.com/originals/b4/bf/fa/b4bffa31fd8b4da2b1ce94bfe8282fd4.png",
+          "new": "/images/contact/instagram-1.png"
+        },
+        {
+          "old": "https://i.pinimg.com/originals/7c/bd/88/7cbd88b99d4ab03aa7f00ea8dfa4bb56.png",
+          "new": "/images/contact/instagram-3.png"
+        }
+      ]
+    }
+  ]
+}

@@ -12,25 +12,25 @@ export function ServicesOverview() {
       icon: Brush,
       title: "Parking Lot Striping",
       description: "Professional line striping, ADA compliance, and custom markings for your business property.",
-      image: "https://i.ytimg.com/vi/ph8ZxgEsLDY/maxresdefault.jpg"
+      image: "/images/services/striping-youtube.jpg"
     },
     {
       icon: Droplets,
       title: "Power Washing",
       description: "Complete pressure washing services to remove stains, grime, and restore your property's appearance.",
-      image: "https://i.ytimg.com/vi/z_03c87RuX4/maxresdefault.jpg"
+      image: "/images/services/power-washing-youtube.jpg"
     },
     {
       icon: Calendar,
       title: "Subscription Plans",
       description: "Regular maintenance schedules designed for SMBs with flexible pricing and priority service.",
-      image: "https://i.pinimg.com/originals/e8/6f/ab/e86fab1aeef12a623d58822ac3dd0249.png"
+      image: "/images/services/ada-compliance.png"
     },
     {
       icon: Shield,
       title: "Quality Guarantee",
       description: "Fully licensed, insured, and bonded with comprehensive warranties on all our work.",
-      image: "https://assets-global.website-files.com/5f688092bdf2ee0b6b010f87/647e15d8ea90a94ac15c61cf_Accredible_BadgePathways_03-Freeform.png"
+      image: "/images/automation/analytics-dashboard.png"
     }
   ]
 

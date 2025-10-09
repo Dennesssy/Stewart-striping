@@ -79,7 +79,7 @@ export function ValueProposition() {
           >
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl bg-gray-200">
               <Image
-                src="https://as2.ftcdn.net/v2/jpg/03/16/06/87/1000_F_316068747_Op8ozS0V3yIEUtSQ7ucD6m5iInH23qQH.jpg"
+                src="/images/hero/business-professional.jpg"
                 alt="Small business with professional parking lot"
                 fill
                 className="object-cover"

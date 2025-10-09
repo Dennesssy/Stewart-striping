@@ -78,7 +78,7 @@ export default function ServicesPage() {
             </p>
             <div className="relative aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl bg-gray-200">
               <Image
-                src="https://i.pinimg.com/originals/53/0a/a9/530aa98dc4fc1485685a4de8a4053960.jpg"
+                src="/images/services/parking-striping-detail.jpg"
                 alt="Professional parking lot striping services"
                 fill
                 className="object-cover"

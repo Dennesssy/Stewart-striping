@@ -13,7 +13,7 @@ export function CTASection() {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full bg-blue-900">
           <Image
-            src="https://brixco.co/wp-content/uploads/2023/12/parking-lot-striping.webp"
+            src="/images/hero/cta-background.webp"
             alt="Professional parking lot striping team"
             fill
             className="object-cover opacity-30"
