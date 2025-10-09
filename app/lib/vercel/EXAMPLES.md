@@ -1,7 +1,7 @@
-/**
- * Vercel Features - Quick Reference Examples
- * Copy-paste these into your code
- */
+# Vercel Features - Quick Reference Examples
+Copy-paste these into your code
+
+```typescript
 
 // ============================================
 // 1. RATE LIMITING
@@ -179,3 +179,4 @@ if (await isMaintenanceMode()) {
 // "0 0 1 * *"      - Monthly on 1st
 // "*/15 * * * *"   - Every 15 minutes
 // "0 */6 * * *"    - Every 6 hours
+```
